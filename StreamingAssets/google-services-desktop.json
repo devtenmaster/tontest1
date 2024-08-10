@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "272173023850",
+    "firebase_url": "https://allstar-a9492-default-rtdb.firebaseio.com",
+    "project_id": "allstar-a9492",
+    "storage_bucket": "allstar-a9492.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272173023850:android:7630e49d93adf8e8050013",
+        "android_client_info": {
+          "package_name": "com.devten.allstar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "272173023850-6hc49dd12hu1o7spk1ssak5pgod7l0t8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABXz4xXotPbDTverhE-8pWXh750iy8qqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "272173023850-6hc49dd12hu1o7spk1ssak5pgod7l0t8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
