@@ -42,9 +42,9 @@ window.addEventListener("load", function () {
     frameworkUrl: buildUrl + "/Build.framework.js.unityweb",
     codeUrl: buildUrl + "/Build.wasm.unityweb",
     streamingAssetsUrl: "StreamingAssets",
-    companyName: "devten",
-    productName: "allstar",
-    productVersion: "1",
+    companyName: "DefaultCompany",
+    productName: "C# TonConnect",
+    productVersion: "1.0",
     showBanner: unityShowBanner,
   };
 
@@ -63,7 +63,6 @@ window.addEventListener("load", function () {
     document.getElementsByTagName('head')[0].appendChild(meta);
   }
 
-  canvas.style.background = "url('" + buildUrl + "/Build.jpg') center / cover";
   loadingBar.style.display = "block";
 
   var script = document.createElement("script");
