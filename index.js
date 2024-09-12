@@ -4,14 +4,6 @@ window.addEventListener("load", function () {
     }
 });
 
-window.addEventListener("orientationchange", function () {
-    if (window.orientation !== 0) {
-        // 세로 모드가 아니면 경고 메시지를 표시하거나 회전을 막을 수 있습니다.
-        //alert("이 게임은 세로 모드로만 플레이할 수 있습니다. 기기를 세로로 돌려주세요.");
-        // 필요에 따라 다른 동작을 추가할 수 있습니다.
-    }
-});
-
   var unityInstanceRef;
   var unsubscribe;
   var container = document.querySelector("#unity-container");
