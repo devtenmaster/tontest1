@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
     productName: "allstar",
     productVersion: "1",
     showBanner: unityShowBanner,
-    orientation: "PORTRAIT",
+    orientation: "portrait",
   };
 
   // By default Unity keeps WebGL canvas render target size matched with
@@ -75,8 +75,9 @@ window.addEventListener("load", function () {
     createUnityInstance(canvas, config, (progress) => {
       progressBarFull.style.width = 100 * progress + "%";
     }).then((unityInstance) => {
-      unityInstanceRef = unityInstance;
-      loadingBar.style.display = "none";
+        unityInstanceRef = unityInstance;
+        loadingBar.style.display = "none";
+        unityInstance.orientation = "portrait";
     }).catch((message) => {
       alert(message);
     });
