@@ -61,17 +61,13 @@ window.addEventListener("load", function () {
     var meta = document.createElement('meta');
     meta.name = 'viewport';
     meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-    document.getElementsByTagName('head')[0].appendChild(meta);
+      document.getElementsByTagName('head')[0].appendChild(meta);
+
+      screen.orientation.lock("portrait").then(() => { }).catch((error) => { alert("screen lock error") });
+      canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("canvas lock error") });
+      window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("window lock error") });
+      container.orientation.lock("portrait").then(() => { }).catch((error) => { alert("container lock error") });
   }
-
-    //screen.orientation
-    //.lock("portrait")
-    //.then(() => {
-    //})
-    //.catch((error) => {
-    //});
-
-  //canvas.orientation.lock("portrait");
 
   canvas.style.background = "url('" + buildUrl + "/Build.jpg') center / cover";
   loadingBar.style.display = "block";
