@@ -63,12 +63,11 @@ window.addEventListener("load", function () {
     meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
       document.getElementsByTagName('head')[0].appendChild(meta);
 
-      screen.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone screen lock error") });
-      canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone canvas lock error") });
-      window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone window lock error") });
-      container.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone container lock error") });
-
-      config.matchWebGLToCanvasSize = false;
+      //screen.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone screen lock error") });
+      //canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone canvas lock error") });
+      //window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone window lock error") });
+      //container.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone container lock error") });
+      //config.matchWebGLToCanvasSize = false;
   }
 
   canvas.style.background = "url('" + buildUrl + "/Build.jpg') center / cover";
@@ -83,10 +82,10 @@ window.addEventListener("load", function () {
         unityInstanceRef = unityInstance;
         loadingBar.style.display = "none";
 
-        screen.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload screen lock error") });
-        canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload canvas lock error") });
-        window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload window lock error") });
-        container.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload container lock error") });
+        //screen.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload screen lock error") });
+        //canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload canvas lock error") });
+        //window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload window lock error") });
+        //container.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload container lock error") });
     }).catch((message) => {
       alert(message);
     });
