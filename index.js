@@ -47,7 +47,6 @@ window.addEventListener("load", function () {
     productName: "allstar",
     productVersion: "1",
     showBanner: unityShowBanner,
-    orientation: "portrait",
   };
 
   // By default Unity keeps WebGL canvas render target size matched with
@@ -61,14 +60,17 @@ window.addEventListener("load", function () {
     // Mobile device style: fill the whole browser client area with the game canvas:
     var meta = document.createElement('meta');
     meta.name = 'viewport';
-      meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes, orientation=portrait';
-      document.getElementsByTagName('head')[0].appendChild(meta);
-
-      canvas.style.width = window.innerWidth + 'px';
-      canvas.style.height = window.innerHeight + 'px';
+    meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+    document.getElementsByTagName('head')[0].appendChild(meta);
   }
 
-  config.orientation = "portrait";
+    screen.orientation
+    .lock("portrait")
+    .then(() => {
+    })
+    .catch((error) => {
+    });
+
   canvas.style.background = "url('" + buildUrl + "/Build.jpg') center / cover";
   loadingBar.style.display = "block";
 
@@ -80,9 +82,6 @@ window.addEventListener("load", function () {
     }).then((unityInstance) => {
         unityInstanceRef = unityInstance;
         loadingBar.style.display = "none";
-        unityInstance.orientation = "portrait";
-        unityInstance.SetFullscreen(1);
-        config.matchWebGLToCanvasSize = true;
     }).catch((message) => {
       alert(message);
     });
