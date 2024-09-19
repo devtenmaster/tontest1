@@ -88,6 +88,7 @@ window.addEventListener("load", function () {
         screen.orientation.lock("portrait").then(() => { }).catch((error) => { alert("screen lock error") });
         canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("canvas lock error") });
         window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("window lock error") });
+        container.orientation.lock("portrait").then(() => { }).catch((error) => { alert("container lock error") });
     }).catch((message) => {
       alert(message);
     });
