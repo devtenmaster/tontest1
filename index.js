@@ -78,6 +78,7 @@ window.addEventListener("load", function () {
         unityInstanceRef = unityInstance;
         loadingBar.style.display = "none";
         unityInstance.orientation = "portrait";
+        unityInstance.SetFullscreen(1);
     }).catch((message) => {
       alert(message);
     });
