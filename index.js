@@ -47,6 +47,7 @@ window.addEventListener("load", function () {
     productName: "allstar",
     productVersion: "1",
     showBanner: unityShowBanner,
+    orientation: "PORTRAIT",
   };
 
   // By default Unity keeps WebGL canvas render target size matched with
