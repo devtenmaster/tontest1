@@ -4,6 +4,11 @@ window.addEventListener("load", function () {
     }
 });
 
+window.addEventListener("orientationchange", function () {
+    if (window.orientation !== 0) {
+    }
+});
+
   var unityInstanceRef;
   var unsubscribe;
   var container = document.querySelector("#unity-container");

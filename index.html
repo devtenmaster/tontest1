@@ -9,17 +9,26 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
 </head>
-  <body>
+<body>
     <div id="unity-container">
-      <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
+        <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1"></canvas>
+        <div id="unity-loading-bar">
+            <div id="unity-logo"></div>
+            <div id="unity-progress-bar-empty">
+                <div id="unity-progress-bar-full"></div>
+            </div>
         </div>
-      </div>
-      <div id="unity-warning"> </div>
+        <div id="unity-warning"> </div>
     </div>
     <script src="index.js"></script>
-  </body>
+
+    <script>
+        // 화면이 회전될 때 감지하고 회전을 금지하는 코드
+        window.addEventListener("orientationchange", function () {
+            if (window.orientation !== 0) {
+            }
+        });
+    </script>
+
+</body>
 </html>
