@@ -71,7 +71,6 @@ window.addEventListener("load", function () {
   config.orientation = "portrait";
   canvas.style.background = "url('" + buildUrl + "/Build.jpg') center / cover";
   loadingBar.style.display = "block";
-  config.matchWebGLToCanvasSize = true;
 
   var script = document.createElement("script");
   script.src = loaderUrl;
@@ -83,6 +82,7 @@ window.addEventListener("load", function () {
         loadingBar.style.display = "none";
         unityInstance.orientation = "portrait";
         unityInstance.SetFullscreen(1);
+        config.matchWebGLToCanvasSize = true;
     }).catch((message) => {
       alert(message);
     });
