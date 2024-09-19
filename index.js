@@ -71,7 +71,7 @@ window.addEventListener("load", function () {
     //.catch((error) => {
     //});
 
-  canvas.orientation.lock("portrait");
+  //canvas.orientation.lock("portrait");
 
   canvas.style.background = "url('" + buildUrl + "/Build.jpg') center / cover";
   loadingBar.style.display = "block";
@@ -84,6 +84,10 @@ window.addEventListener("load", function () {
     }).then((unityInstance) => {
         unityInstanceRef = unityInstance;
         loadingBar.style.display = "none";
+
+        screen.orientation.lock("portrait").then(() => { }).catch((error) => { alert("screen lock error") });
+        canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("canvas lock error") });
+        window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("window lock error") });
     }).catch((message) => {
       alert(message);
     });
