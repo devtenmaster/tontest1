@@ -62,12 +62,16 @@ window.addEventListener("load", function () {
     var meta = document.createElement('meta');
     meta.name = 'viewport';
       meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes, orientation=portrait';
-    document.getElementsByTagName('head')[0].appendChild(meta);
+      document.getElementsByTagName('head')[0].appendChild(meta);
+
+      canvas.style.width = window.innerWidth + 'px';
+      canvas.style.height = window.innerHeight + 'px';
   }
 
   config.orientation = "portrait";
   canvas.style.background = "url('" + buildUrl + "/Build.jpg') center / cover";
   loadingBar.style.display = "block";
+  config.matchWebGLToCanvasSize = true;
 
   var script = document.createElement("script");
   script.src = loaderUrl;
