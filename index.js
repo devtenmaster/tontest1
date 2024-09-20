@@ -76,11 +76,13 @@ window.addEventListener("load", function () {
   var script = document.createElement("script");
   script.src = loaderUrl;
   script.onload = () => {
-    createUnityInstance(canvas, config, (progress) => {
-      progressBarFull.style.width = 100 * progress + "%";
-    }).then((unityInstance) => {
-        unityInstanceRef = unityInstance;
-        loadingBar.style.display = "none";
+      createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+      }).then((unityInstance) => {
+          unityInstanceRef = unityInstance;
+          loadingBar.style.display = "none";
+
+          container.requestFullscreen().catch((error) => { alert("requestFullscreen error : " + error); });
 
         //screen.orientation.lock("landscape").then(() => { }).catch((error) => { alert("phone screen lock error : " + error) });
         //canvas.orientation.lock("landscape").then(() => { }).catch((error) => { alert("phone canvas lock error : " + error) });
