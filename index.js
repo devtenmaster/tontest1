@@ -69,7 +69,6 @@ window.addEventListener("load", function () {
       //canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone canvas lock error : " + error) });
       //window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone window lock error : " + error) });
       //container.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone container lock error : " + error) });
-      //config.matchWebGLToCanvasSize = false;
   }
 
   canvas.style.background = "url('" + buildUrl + "/Build.jpg') center / cover";
@@ -90,22 +89,6 @@ window.addEventListener("load", function () {
           //canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload canvas lock error : " + error) });
           //window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload window lock error : " + error) });
           //container.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload container lock error : " + error) });
-
-          //Telegram.WebApp.ready(function () {
-          //    Telegram.WebApp.expand();
-          //});
-
-          const element = document.documentElement; // 전체 페이지를 대상으로 설정
-          if (element.requestFullscreen) {
-              element.requestFullscreen();
-          } else if (element.mozRequestFullScreen) { // Firefox
-              element.mozRequestFullScreen();
-          } else if (element.webkitRequestFullscreen) { // Chrome, Safari, Opera
-              element.webkitRequestFullscreen();
-          } else if (element.msRequestFullscreen) { // IE/Edge
-              element.msRequestFullscreen();
-          }
-
     }).catch((message) => {
       alert(message);
     });
