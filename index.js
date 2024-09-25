@@ -80,7 +80,7 @@ window.addEventListener("load", function () {
           unityInstanceRef = unityInstance;
           loadingBar.style.display = "none";
 
-          window.Telegram.WebApp.expand().then(() => { }).catch((error) => { alert("Telegram expand error : " + error) });
+          window.Telegram.WebApp.expand();
 
           //screen.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload screen lock error : " + error) });
           //canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload canvas lock error : " + error) });
