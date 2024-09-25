@@ -63,7 +63,7 @@ window.addEventListener("load", function () {
     meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
       document.getElementsByTagName('head')[0].appendChild(meta);
 
-      canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone canvas lock error : " + error) });
+      //canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone canvas lock error : " + error) });
       //window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone window lock error : " + error) });
       //container.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone container lock error : " + error) });
   }
