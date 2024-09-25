@@ -63,9 +63,10 @@ window.addEventListener("load", function () {
     meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
       document.getElementsByTagName('head')[0].appendChild(meta);
 
-      //canvas.orientation.lock("landscape").then(() => { }).catch((error) => { alert("phone canvas lock error : " + error) });
-      //window.orientation.lock("landscape").then(() => { }).catch((error) => { alert("phone window lock error : " + error) });
-      //container.orientation.lock("landscape").then(() => { }).catch((error) => { alert("phone container lock error : " + error) });
+      screen.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone screen lock error : " + error) });
+      //canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone canvas lock error : " + error) });
+      //window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone window lock error : " + error) });
+      //container.orientation.lock("portrait").then(() => { }).catch((error) => { alert("phone container lock error : " + error) });
       //config.matchWebGLToCanvasSize = false;
   }
 
@@ -83,10 +84,10 @@ window.addEventListener("load", function () {
 
           //container.requestFullscreen().catch((error) => { alert("requestFullscreen error : " + error); });
 
-        //screen.orientation.lock("landscape").then(() => { }).catch((error) => { alert("phone screen lock error : " + error) });
-        //canvas.orientation.lock("landscape").then(() => { }).catch((error) => { alert("phone canvas lock error : " + error) });
-        //window.orientation.lock("landscape").then(() => { }).catch((error) => { alert("phone window lock error : " + error) });
-        //container.orientation.lock("landscape").then(() => { }).catch((error) => { alert("phone container lock error : " + error) });
+        //screen.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload screen lock error : " + error) });
+        //canvas.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload canvas lock error : " + error) });
+        //window.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload window lock error : " + error) });
+        //container.orientation.lock("portrait").then(() => { }).catch((error) => { alert("onload container lock error : " + error) });
     }).catch((message) => {
       alert(message);
     });
